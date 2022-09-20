@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Greek Yogurt</title>
+
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      .container {
+        width: 50%;
+        background-image: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+        margin: 0 auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        box-shadow: 10px 10px lightpink;
+      }
+
+      img {
+        height: 300px;
+        width: 400px;
+        border-radius: 20px 30px 100px 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+        line-height: 12px;
+      }
+
+      p {
+        font-size: large;
+        margin-left: 4px;
+      }
+
+      H3 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: small;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 6px;
+      }
+
+      button {
+        font-size: medium;
+        color: black;
+        height: 3rem;
+        width: 10rem;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+        background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+      }
+
+      button:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>I Love Yogurt</h1>
+      <hr />
+      <h2>Especially the Greek Yogurt</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/511/original/yogurt.png?1663541656"
+        alt=""
+      />
+      <p>
+        Greek yogurt, also known as concentrated or strained yogurt, is made by
+        eliminating the whey and other liquids from regular yogurt. <br />
+        This is because the straining process reduces the total volume, Greek
+        yogurt takes significantly more milk than regular yogurt to make a batch
+        of the same size.
+        <span style="color: red; font-weight: bold">Traditionally,</span> the
+        yogurt is strained in cloth bags up to three times until it reaches the
+        desired texture.
+        <span style="color: red; font-weight: bold"
+          >Modern production methods</span
+        >
+        use centrifuges to achieve the same effect.<em>
+          Some companies may use thickening agents or other dry ingredients, </em
+        >in which case the final product is referred to as
+        <strong>fortified or Greek-style yogurt</strong>. Because most of the
+        liquid is removed, Greek yogurt is much thicker and tangier than regular
+        yogurt. It’s also generally more expensive since it requires more milk.
+      </p>
+      <h3>Below are benefits of greek yogurt</h3>
+      <a href="https://www.medicalnewstoday.com/articles/323169"> Read Now </a>
+
+      <button class="order-button">Order Now!!!</button>
+    </div>
+
+    <script>
+      function orderYogurt() {
+        let name = prompt("What is your name?");
+        let yogurtFlavour = prompt("Which flavour you want to order?");
+        let heading = document.querySelector("h1");
+
+        if (name.length > 0 && yogurtFlavour.length > 0) {
+          heading.innerHTML =
+            "Thanks " +
+            name +
+            " we will be in touch " +
+            "meanwhile try other greek flavour";
+        } else {
+          heading.innerHTML = "☹️ Answer my questions!";
+        }
+      }
+
+      let buyYogurt = document.querySelector("button");
+      buyYogurt.addEventListener("click", orderYogurt);
+    </script>
+  </body>
+</html>
